@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, 技术" />
 
 
 
@@ -86,13 +86,13 @@
 
 <meta name="description" content="记录学习和对人生的思考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人服务器搭建流程">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/个人服务器搭建流程/index.html">
+<meta property="og:title" content="hexo搭建blog站点日记">
+<meta property="og:url" content="http://yoursite.com/2017/02/15/hexo搭建blog站点日记/index.html">
 <meta property="og:site_name" content="西伯利亚牧马人">
 <meta property="og:description" content="记录学习和对人生的思考">
-<meta property="og:updated_time" content="2017-02-15T08:19:11.000Z">
+<meta property="og:updated_time" content="2017-02-15T16:18:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人服务器搭建流程">
+<meta name="twitter:title" content="hexo搭建blog站点日记">
 <meta name="twitter:description" content="记录学习和对人生的思考">
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> 个人服务器搭建流程 | 西伯利亚牧马人 </title>
+  <title> hexo搭建blog站点日记 | 西伯利亚牧马人 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -231,7 +231,7 @@
             
             
               
-                个人服务器搭建流程
+                hexo搭建blog站点日记
               
             
           </h1>
@@ -257,6 +257,15 @@
           
 
           
+          
+             <span id="/2017/02/15/hexo搭建blog站点日记/" class="leancloud_visitors" data-flag-title="hexo搭建blog站点日记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
           
 
           
@@ -291,20 +300,6 @@
     <footer class="post-footer">
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/15/first-article/" rel="next" title="超级家庭服务">
-                <i class="fa fa-chevron-left"></i> 超级家庭服务
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -369,7 +364,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -535,6 +530,108 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
 
 </body>
 </html>
