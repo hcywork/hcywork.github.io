@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="记录学习和对人生的思考">
+<meta name="description" content="&amp;ensp;&amp;ensp;  一直想搭建一个属于自己的博客平台，可以不受到任何人的限制，还可以随意选择自己喜欢的主题和界面。在朋友的推荐下，开始了hexo的踩坑之路。
+&amp;ensp;&amp;ensp;下面就开始介绍一下HEXO+Github实现个人博客的方式。
+安装环境：MacOs 10.11.6  
+
+&amp;ensp;&amp;ensp;因为有些人可能仅仅是想搭建自己的博客平台，而没很多其他的编程基础，所以这里讲详">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建blog站点日记">
+<meta property="og:title" content="HEXO+Github搭建自己的blog站点">
 <meta property="og:url" content="http://yoursite.com/2017/02/16/firstblog/index.html">
 <meta property="og:site_name" content="西伯利亚牧马人">
-<meta property="og:description" content="记录学习和对人生的思考">
-<meta property="og:updated_time" content="2017-02-16T07:23:48.000Z">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;  一直想搭建一个属于自己的博客平台，可以不受到任何人的限制，还可以随意选择自己喜欢的主题和界面。在朋友的推荐下，开始了hexo的踩坑之路。
+&amp;ensp;&amp;ensp;下面就开始介绍一下HEXO+Github实现个人博客的方式。
+安装环境：MacOs 10.11.6  
+
+&amp;ensp;&amp;ensp;因为有些人可能仅仅是想搭建自己的博客平台，而没很多其他的编程基础，所以这里讲详">
+<meta property="og:updated_time" content="2017-02-16T16:39:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建blog站点日记">
-<meta name="twitter:description" content="记录学习和对人生的思考">
+<meta name="twitter:title" content="HEXO+Github搭建自己的blog站点">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;  一直想搭建一个属于自己的博客平台，可以不受到任何人的限制，还可以随意选择自己喜欢的主题和界面。在朋友的推荐下，开始了hexo的踩坑之路。
+&amp;ensp;&amp;ensp;下面就开始介绍一下HEXO+Github实现个人博客的方式。
+安装环境：MacOs 10.11.6  
+
+&amp;ensp;&amp;ensp;因为有些人可能仅仅是想搭建自己的博客平台，而没很多其他的编程基础，所以这里讲详">
 
 
 
@@ -111,7 +123,7 @@
   };
 </script>
 
-  <title> hexo搭建blog站点日记 | 西伯利亚牧马人 </title>
+  <title> HEXO+Github搭建自己的blog站点 | 西伯利亚牧马人 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +263,7 @@
             
             
               
-                hexo搭建blog站点日记
+                HEXO+Github搭建自己的blog站点
               
             
           </h1>
@@ -278,7 +290,7 @@
 
           
           
-             <span id="/2017/02/16/firstblog/" class="leancloud_visitors" data-flag-title="hexo搭建blog站点日记">
+             <span id="/2017/02/16/firstblog/" class="leancloud_visitors" data-flag-title="HEXO+Github搭建自己的blog站点">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -300,7 +312,23 @@
       
 
       
-        
+        <p> &ensp;&ensp;  一直想搭建一个属于自己的博客平台，可以不受到任何人的限制，还可以随意选择自己喜欢的主题和界面。在朋友的推荐下，开始了hexo的踩坑之路。</p>
+<p>&ensp;&ensp;下面就开始介绍一下HEXO+Github实现个人博客的方式。</p>
+<font color="#f00">安装环境：MacOs 10.11.6  </font>
+
+<p>&ensp;&ensp;因为有些人可能仅仅是想搭建自己的博客平台，而没很多其他的编程基础，所以这里讲详细描述博客平台的整个搭建过程。</p>
+<p>#mac环境</p>
+<p>##安装包管理软件Hombrew<br>&nbsp;&nbsp;Homebrew, Mac系统的包管理器，用于安装NodeJS和一些其他必需的工具软件。打开终端，并且输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+<p>然后静静的等待它自动安装好。<br>有时候事情没有那么尽如人意，在Max OS X 10.11（El Capitan)版本中，homebrew在安装软件时可能会碰到/usr/local目录不可写的权限问题。可以使用下面的命令修复：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R `whoami` /usr/local</div></pre></td></tr></table></figure></p>
+<p>##Node<br>&nbsp;&nbsp;Node是后面搭建博客平台的必需环境，使用使用Homebrew来安装Node.js.<br>因为对node版本没有强制要求，所以直接安装最新版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure></p>
+<p>安装完node以后，node的默认镜像不能正常使用，这里建议切换npm的镜像源（也可以使用科学上网工具）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config set registry https://registry.npm.taobao.org --global</div><div class="line">npm config set disturl https://npm.taobao.org/dist --global</div></pre></td></tr></table></figure>
+<p>自此node安装结束。</p>
+<p>##git<br>Hexo＋github的好处很多，不用我们自己搭建服务，借助github的仓库即可存放博文，因此git是必需安装的环境。终端键入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
+<p>做到此处，您基础的环境已经装备好了。</p>
+
       
     </div>
 
@@ -398,7 +426,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
