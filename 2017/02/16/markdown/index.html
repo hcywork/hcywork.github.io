@@ -94,7 +94,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 <meta property="og:description" content="markdown 文本编辑的方便性和实用性已经得到了充分的验证，已经成文现在市面上的主流文本编辑方式。
 markdown特点markdown 支持html标签。markdown 的文本编辑器中支持html的文本编辑形式。
 Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。">
-<meta property="og:updated_time" content="2017-02-16T09:49:06.000Z">
+<meta property="og:updated_time" content="2017-02-16T13:17:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown基础语法">
 <meta name="twitter:description" content="markdown 文本编辑的方便性和实用性已经得到了充分的验证，已经成文现在市面上的主流文本编辑方式。
@@ -310,7 +310,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 <h1 id="markdown特点"><a href="#markdown特点" class="headerlink" title="markdown特点"></a>markdown特点</h1><h2 id="markdown-支持html标签。"><a href="#markdown-支持html标签。" class="headerlink" title="markdown 支持html标签。"></a>markdown 支持html标签。</h2><p>markdown 的文本编辑器中支持html的文本编辑形式。</p>
 <p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p>
 <p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。</p>
-<p>要制约的只有一些 HTML 区块元素――比如 <code>&lt; div&gt;、&lt; table&gt;、&lt; pre&gt;、&lt; p&gt;</code>等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt; p&gt;</code>标签。</p>
+<p>要制约的只有一些 HTML 区块元素――比如 <code>&lt; div&gt;、&lt; table&gt;、&lt; pre&gt;、&lt; p&gt;</code>等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt; p&gt;</code>标签。并且如果需要设置字体相关属性，可以通过html的语法进行设置字体颜色大小。</p>
 <h1 id="markdown特性基础语法"><a href="#markdown特性基础语法" class="headerlink" title="markdown特性基础语法"></a>markdown特性基础语法</h1><h2 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h2><h3 id="文件标题"><a href="#文件标题" class="headerlink" title="文件标题"></a>文件标题</h3><p>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> <span class="comment"># 这是 H1 #</span></div><div class="line"><span class="comment">## 这是 H2 ##</span></div><div class="line"><span class="comment">### 这是 H3 ######</span></div></pre></td></tr></table></figure>
 <h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>markdown 支持有序列表和无序列表，无序列表实用星号，加号或是减号作为列表标记：</p>
@@ -334,7 +334,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 <li>Parish</li>
 </ol>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>  Bird</div><div class="line"><span class="number">2.</span>  McHale</div><div class="line"><span class="number">3.</span>  Parish</div></pre></td></tr></table></figure>
-<h2 id="引入链接"><a href="#引入链接" class="headerlink" title="引入链接"></a>引入链接</h2><h3 id="引入文本超链接"><a href="#引入文本超链接" class="headerlink" title="引入文本超链接"></a>引入文本超链接</h3><p>插入链接与插入图片的语法很像，区别在一个 !号<br>现在测试引入百度搜索连接，<a href="http://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
+<h2 id="引入链接"><a href="#引入链接" class="headerlink" title="引入链接"></a>引入链接</h2><h3 id="引入文本超链接"><a href="#引入文本超链接" class="headerlink" title="引入文本超链接"></a>引入文本超链接</h3><p><font color="#f00">插入链接与插入图片的语法很像，区别在一个 !号   </font><br>现在测试引入百度搜索连接，<a href="http://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
 <p> 实现以上效果为 </p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">现在测试引入百度搜索连接，[baidu] </div><div class="line">在后面添加“ [baidu]: http://www.baidu.com/  ”</div></pre></td></tr></table></figure>
 <h3 id="引入图片链接"><a href="#引入图片链接" class="headerlink" title="引入图片链接"></a>引入图片链接</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Alt text](/path/to/img.jpg)</div></pre></td></tr></table></figure>
