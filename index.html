@@ -423,13 +423,10 @@
 <li>Green</li>
 <li>Blue</li>
 </ul>
-<p>减号标记：-  red</p>
+<p>减号标记：</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">  red</span></div><div class="line">-<span class="ruby">  green</span></div><div class="line">-<span class="ruby">  blue</span></div></pre></td></tr></table></figure>
 <ul>
-<li>green</li>
-<li><p>blue</p>
-</li>
-<li><p>red</p>
-</li>
+<li>red</li>
 <li>green</li>
 <li>blue</li>
 </ul>
@@ -437,18 +434,17 @@
 <ol>
 <li>Bird</li>
 <li>McHale</li>
-<li><p>Parish</p>
-</li>
-<li><p>Bird</p>
-</li>
-<li>McHale</li>
 <li>Parish</li>
 </ol>
-<h2 id="引入链接"><a href="#引入链接" class="headerlink" title="引入链接"></a>引入链接</h2><h3 id="引入文本超链接"><a href="#引入文本超链接" class="headerlink" title="引入文本超链接"></a>引入文本超链接</h3><p>现在测试引入百度搜索连接，<a href="http://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
-<p> 实现以上效果为 <code>现在测试引入百度搜索连接，<a href="http://www.baidu.com/" target="_blank" rel="external">baidu</a>: <a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a> </code>   </p>
-<h3 id="引入图片链接"><a href="#引入图片链接" class="headerlink" title="引入图片链接"></a>引入图片链接</h3><text><img src="/path/to/img.jpg" alt="Alt text"> </text>
-
-<p><img src="/path/to/img.jpg" alt="Alt text" title="Optional title">  </p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1.  </span>Bird</div><div class="line"><span class="bullet">2.  </span>McHale</div><div class="line"><span class="bullet">3.  </span>Parish</div></pre></td></tr></table></figure>
+<h2 id="引入链接"><a href="#引入链接" class="headerlink" title="引入链接"></a>引入链接</h2><h3 id="引入文本超链接"><a href="#引入文本超链接" class="headerlink" title="引入文本超链接"></a>引入文本超链接</h3><p>插入链接与插入图片的语法很像，区别在一个 !号<br>现在测试引入百度搜索连接，<a href="http://www.baidu.com/" target="_blank" rel="external">baidu</a></p>
+<p> 实现以上效果为 </p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">现在测试引入百度搜索连接，[baidu] </div><div class="line">在后面添加“ [baidu]: http://www.baidu.com/  ”</div></pre></td></tr></table></figure>
+<h3 id="引入图片链接"><a href="#引入图片链接" class="headerlink" title="引入图片链接"></a>引入图片链接</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Alt text](/path/to/img.jpg)</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</div></pre></td></tr></table></figure>
+<h2 id="设置代码片段"><a href="#设置代码片段" class="headerlink" title="设置代码片段"></a>设置代码片段</h2><p>很多大神写的博客让我们读着很爽，不仅叙述的条目清晰，而且代码片段的设置和放置也让人清晰易懂，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">10</span>;</div><div class="line">a=a++;</div><div class="line">System.out.print(<span class="string">"a:"</span>+a);</div></pre></td></tr></table></figure>
+<p>那么这个效果怎么实现呢？<br>  仅仅需要代码块标记符 <code>`  或者</code> 或者 <code>或者n个</code>，并且在代码的结尾处有相等的符号结尾。  </p>
 
           
         
