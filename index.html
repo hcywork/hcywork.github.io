@@ -444,6 +444,38 @@
 <h2 id="设置代码片段"><a href="#设置代码片段" class="headerlink" title="设置代码片段"></a>设置代码片段</h2><p>  很多大神写的博客让我们读着很爽，不仅叙述的条目清晰，而且代码片段的设置和放置也让人清晰易懂，例如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">10</span>;</div><div class="line">a=a++;</div><div class="line">System.out.print(<span class="string">"a:"</span>+a);</div></pre></td></tr></table></figure>
 <p>那么这个效果怎么实现呢？<br>  仅仅需要代码块标记符  三个esc按钮下的点 或者两个esc按钮下的点或者一个esc按钮下的点或者n个esc按钮下的点，并且在代码的结尾处有相等的符号结尾。  </p>
+<h2 id="Markdown-转译符号"><a href="#Markdown-转译符号" class="headerlink" title="Markdown 转译符号"></a>Markdown 转译符号</h2><p>在Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">\   反斜线</div><div class="line">`   反引号</div><div class="line">*   星号</div><div class="line">_   底线</div><div class="line">&#123;&#125;  花括号</div><div class="line">[]  方括号</div><div class="line">()  括弧</div><div class="line"><span class="comment">#   井字号</span></div><div class="line">+   加号</div><div class="line"><span class="bullet">-</span>   减号</div><div class="line">.   英文句点</div><div class="line">!   惊叹号</div></pre></td></tr></table></figure>
+<hr>
+<hr>
+<p>效果的代码</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">****</div><div class="line">***</div></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title="-"></a>-</h2><p>效果的代码</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">-</span></div><div class="line"><span class="bullet">-</span>-</div></pre></td></tr></table></figure>
+<h2 id="markdown-实现表格"><a href="#markdown-实现表格" class="headerlink" title="markdown 实现表格"></a>markdown 实现表格</h2><p>表格的实现是比较麻烦的，例如如下语法格式：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| tables        | onecolum		| towcolum <span class="string">|</span></div><div class="line">| --------------|:-----------:|---------:|</div><div class="line">| rowone 	      | rowtow		| rowthree |</div><div class="line">| rowone 	      | rowtow		| rowthree |</div></pre></td></tr></table></figure>
+<p>实现效果如下</p>
+<table>
+<thead>
+<tr>
+<th>tables</th>
+<th style="text-align:center">onecolum</th>
+<th style="text-align:right">towcolum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rowone</td>
+<td style="text-align:center">rowtow</td>
+<td style="text-align:right">rowthree</td>
+</tr>
+<tr>
+<td>rowone</td>
+<td style="text-align:center">rowtow</td>
+<td style="text-align:right">rowthree</td>
+</tr>
+</tbody>
+</table>
 
           
         

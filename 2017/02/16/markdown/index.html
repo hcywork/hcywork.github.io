@@ -94,7 +94,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 <meta property="og:description" content="markdown 文本编辑的方便性和实用性已经得到了充分的验证，已经成文现在市面上的主流文本编辑方式。
 markdown特点markdown 支持html标签。markdown 的文本编辑器中支持html的文本编辑形式。
 Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。">
-<meta property="og:updated_time" content="2017-02-16T13:17:20.000Z">
+<meta property="og:updated_time" content="2017-02-16T14:21:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown基础语法">
 <meta name="twitter:description" content="markdown 文本编辑的方便性和实用性已经得到了充分的验证，已经成文现在市面上的主流文本编辑方式。
@@ -342,6 +342,38 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 <h2 id="设置代码片段"><a href="#设置代码片段" class="headerlink" title="设置代码片段"></a>设置代码片段</h2><p>  很多大神写的博客让我们读着很爽，不仅叙述的条目清晰，而且代码片段的设置和放置也让人清晰易懂，例如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">10</span>;</div><div class="line">a=a++;</div><div class="line">System.out.print(<span class="string">"a:"</span>+a);</div></pre></td></tr></table></figure>
 <p>那么这个效果怎么实现呢？<br>  仅仅需要代码块标记符  三个esc按钮下的点 或者两个esc按钮下的点或者一个esc按钮下的点或者n个esc按钮下的点，并且在代码的结尾处有相等的符号结尾。  </p>
+<h2 id="Markdown-转译符号"><a href="#Markdown-转译符号" class="headerlink" title="Markdown 转译符号"></a>Markdown 转译符号</h2><p>在Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">\   反斜线</div><div class="line">`   反引号</div><div class="line">*   星号</div><div class="line">_   底线</div><div class="line">&#123;&#125;  花括号</div><div class="line">[]  方括号</div><div class="line">()  括弧</div><div class="line"><span class="comment">#   井字号</span></div><div class="line">+   加号</div><div class="line"><span class="bullet">-</span>   减号</div><div class="line">.   英文句点</div><div class="line">!   惊叹号</div></pre></td></tr></table></figure>
+<hr>
+<hr>
+<p>效果的代码</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">****</div><div class="line">***</div></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title="-"></a>-</h2><p>效果的代码</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">-</span></div><div class="line"><span class="bullet">-</span>-</div></pre></td></tr></table></figure>
+<h2 id="markdown-实现表格"><a href="#markdown-实现表格" class="headerlink" title="markdown 实现表格"></a>markdown 实现表格</h2><p>表格的实现是比较麻烦的，例如如下语法格式：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| tables        | onecolum		| towcolum <span class="string">|</span></div><div class="line">| --------------|:-----------:|---------:|</div><div class="line">| rowone 	      | rowtow		| rowthree |</div><div class="line">| rowone 	      | rowtow		| rowthree |</div></pre></td></tr></table></figure>
+<p>实现效果如下</p>
+<table>
+<thead>
+<tr>
+<th>tables</th>
+<th style="text-align:center">onecolum</th>
+<th style="text-align:right">towcolum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rowone</td>
+<td style="text-align:center">rowtow</td>
+<td style="text-align:right">rowthree</td>
+</tr>
+<tr>
+<td>rowone</td>
+<td style="text-align:center">rowtow</td>
+<td style="text-align:right">rowthree</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -476,7 +508,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown特点"><span class="nav-number">1.</span> <span class="nav-text">markdown特点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-支持html标签。"><span class="nav-number">1.1.</span> <span class="nav-text">markdown 支持html标签。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown特性基础语法"><span class="nav-number">2.</span> <span class="nav-text">markdown特性基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区块元素"><span class="nav-number">2.1.</span> <span class="nav-text">区块元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">文件标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-number">2.1.2.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-number">2.1.3.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入链接"><span class="nav-number">2.2.</span> <span class="nav-text">引入链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入文本超链接"><span class="nav-number">2.2.1.</span> <span class="nav-text">引入文本超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入图片链接"><span class="nav-number">2.2.2.</span> <span class="nav-text">引入图片链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置代码片段"><span class="nav-number">2.3.</span> <span class="nav-text">设置代码片段</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown特点"><span class="nav-number">1.</span> <span class="nav-text">markdown特点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-支持html标签。"><span class="nav-number">1.1.</span> <span class="nav-text">markdown 支持html标签。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown特性基础语法"><span class="nav-number">2.</span> <span class="nav-text">markdown特性基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区块元素"><span class="nav-number">2.1.</span> <span class="nav-text">区块元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">文件标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-number">2.1.2.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-number">2.1.3.</span> <span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入链接"><span class="nav-number">2.2.</span> <span class="nav-text">引入链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入文本超链接"><span class="nav-number">2.2.1.</span> <span class="nav-text">引入文本超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入图片链接"><span class="nav-number">2.2.2.</span> <span class="nav-text">引入图片链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置代码片段"><span class="nav-number">2.3.</span> <span class="nav-text">设置代码片段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-转译符号"><span class="nav-number">2.4.</span> <span class="nav-text">Markdown 转译符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.5.</span> <span class="nav-text">-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-实现表格"><span class="nav-number">2.6.</span> <span class="nav-text">markdown 实现表格</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
