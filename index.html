@@ -631,6 +631,7 @@
 </tr>
 </tbody>
 </table>
+<p>自己使用的先总节到此，后续使用会再添加。</p>
 
           
         
@@ -757,7 +758,19 @@
 <h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><p>事情还没结束，hexo＋github搭建博客，是不是还没有见到git的使用？是的，下面将我们的github的仓库作为我们的博客远程库。实现如下：</p>
 <h3 id="创建github帐号"><a href="#创建github帐号" class="headerlink" title="创建github帐号"></a>创建github帐号</h3><p>打开链接 <a href="https://github.com/" target="_blank" rel="external">github</a> ，注册一个个人的帐号，帐号的名称非常重要，因为以后会成为你的博客名称的一部分。</p>
 <p><image src="http://olieidris.bkt.clouddn.com/12.png" ／=""><br>创建帐号成功以后，打开github页面，创建git仓库，格式如下<br><code>your_user_name.github.io</code><br>例如我的github帐号为hcywork ，我的库名就命名为：<br><code>hcywork.github.io</code></image></p>
-<h3 id="配置Hexo帐号"><a href="#配置Hexo帐号" class="headerlink" title="配置Hexo帐号"></a>配置Hexo帐号</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3>
+<h3 id="配置Hexo-1"><a href="#配置Hexo-1" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>首先进入安装目录，按照之前演示的目录为进入“ Users/hcy/software/blog”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ pwd //查看当前目录，如果现在终端在该目录下，则不用修改目录</div><div class="line">$ cd Users/hcy/software/blog  //如果不是在此目录则进入该目录</div></pre></td></tr></table></figure>
+<p>进入blog文件夹以后，输入：<br><code>$ ls  //查看当前目录中的所有文件</code><br>该命令输入后现实文件夹中包含的文件为：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_config.yml  	debug.log	package.json</div><div class="line">	scaffolds 	themes   db.json </div><div class="line">	node_modules	  public		source</div></pre></td></tr></table></figure>
+<p>后面将修改<code>_config.yml</code>文件，输入命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi  _config.yml</div></pre></td></tr></table></figure>
+<p>然后敲键盘字母‘a’，使文件变成输入模式，然后在文件的最底部，拷贝创建的仓库地址放到文件的最后部分。本人的文件底部内容如下（git仓库的地址请填入个人创建的地址）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/hcywork/hcywork.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>拷贝成功以后，vi编辑器为输入模式，点击键盘的“    esc”键，离开插入模式，然后输入“:wq!”(字符串解释：一个分号，字母w，字母q ，半角的感叹号)。保存结束以后执行如下命令添加项目依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  // 每次修改或者部署时执行该命令，使部署生效。</div></pre></td></tr></table></figure>
+<p>以上执行成功以后，在浏览器的地址栏中输入：<a href="https://hcywork.github.io" target="_blank" rel="external">https://hcywork.github.io</a>  （解释 ：注册时的git账号＋.github.io ） 该地址即可访问成功搭建的博客首页啦。</p>
+<p>主题选择和设置问题在xx中。</p>
+
           
         
       
