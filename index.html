@@ -253,6 +253,217 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/12/android2-3err1/" itemprop="url">
+                  android2.3err1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-12T12:10:56+08:00" content="2017-03-12">
+              2017-03-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/12/android2-3err1/" class="leancloud_visitors" data-flag-title="android2.3err1">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#报错：Error: Not found; no service started.<br>问题描述：之前使用android2.2.x时，使用乐视1s进行代码调试OK，当as升级到2.3以后，调试运行时发现不能将程序运行起来了，直接报错为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.InstantRunService</div><div class="line">Starting service: Intent </div><div class="line">&#123; act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] </div><div class="line">cmp=com.xxx.xxx.constrain/com.android.tools.fd.runtime.InstantRunService &#125;</div><div class="line">Error: Not found; no service started.</div></pre></td></tr></table></figure>
+<p>在国内网站翻了一会没有找到靠谱的答案，就去了google，找到了许多，经过尝试以后发现，在as升级到2.3以后，需要为调试app在手机中设置自启动的权限。经过设置后完美解决了这个问题。</p>
+<p>##乐视手机：<br>打开设置界面-&gt;隐私授权-&gt;您已经允许n款应用自启-&gt;（找到你的那款app，设置允许自启动就好啦）</p>
+<p>##google question<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://code.google.com/p/android/issues/detail?id=235879</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/27/popupwindow/" itemprop="url">
+                  popupwindow
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-27T10:14:05+08:00" content="2017-02-27">
+              2017-02-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/27/popupwindow/" class="leancloud_visitors" data-flag-title="popupwindow">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="popupwindow在android7-0中兼容问题"><a href="#popupwindow在android7-0中兼容问题" class="headerlink" title="popupwindow在android7.0中兼容问题"></a>popupwindow在android7.0中兼容问题</h1><p>在安卓7.0及其以上系统中，popupwindow设置popupWindow.showAsDropDown(pageHeadL, 0, 0)以后，会在安卓系统中全屏显示，不能达到在某个控件的下面。解决这种问题是重写popupwindow中的showAsDropDown方法。</p>
+<p>####代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">PopupWindow popupWindow = <span class="keyword">new</span> PopupWindow(vkey, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT) &#123;</div><div class="line">            <span class="comment">/**</span></div><div class="line">             * 在安卓7.0以后popupwindow会因为弹出层设置显示比例导致不能显示在某个控件的后面，下面的方法</div><div class="line">             * 重写以后可以</div><div class="line">             * <span class="doctag">@param</span> anchor</div><div class="line">             */</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showAsDropDown</span><span class="params">(View anchor)</span> </span>&#123;</div><div class="line">                <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">24</span>) &#123;</div><div class="line">                    Rect rect = <span class="keyword">new</span> Rect();</div><div class="line">                    anchor.getGlobalVisibleRect(rect);</div><div class="line">                    <span class="keyword">int</span> h = anchor.getResources().getDisplayMetrics().heightPixels - rect.bottom;</div><div class="line">                    setHeight(h);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">super</span>.showAsDropDown(anchor);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/16/oldmovie/" itemprop="url">
                   老电影的追忆
                 </a>
@@ -839,7 +1050,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
